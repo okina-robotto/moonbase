@@ -213,6 +213,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-aarch64-linux)
       racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
+      racc (~> 1.4)
     numerizer (0.1.1)
     parallel (1.23.0)
     parser (3.2.2.3)
@@ -339,7 +341,7 @@ GEM
     sidekiq-status (3.0.3)
       chronic_duration
       sidekiq (>= 6.0, < 8)
-    sidekiq-unique-jobs (8.0.2)
+    sidekiq-unique-jobs (8.0.3)
       brpoplpush-redis_script (> 0.1.1, <= 2.0.0)
       concurrent-ruby (~> 1.0, >= 1.0.5)
       sidekiq (>= 7.0.0, < 8.0.0)
@@ -382,6 +384,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   aws-sdk-rails!
