@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://s3.amazonaws.com/BUCKET?list-type=2&prefix=PREFIX
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby3/3.109.2 ruby/2.7.2 x86_64-darwin19 aws-sdk-s3/1.84.1
+      Host:
+      - s3.amazonaws.com
+      X-Amz-Date:
+      - 20201116T042840Z
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIATVL2FMWXL3KBCLLW/20201116/us-east-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=bc6713bd6f16e82d508a9901d65e1f2589b5b4864be56531bdcd667d061e609c
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - bfTyQx+JqIF4l3cB4pTeqk2ic3+CRl1YKJRHvHX1jLTEfuD9u2jwB8gSphgsTPn3PhkR83mzZ1U=
+      X-Amz-Request-Id:
+      - 91B49A11EF25849F
+      Date:
+      - Mon, 16 Nov 2020 04:29:09 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>com.lyticaa.reports.development</Name><Prefix>408a3dca-69d4-4bf1-b859-e4a67f50a091/unprocessed</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>408a3dca-69d4-4bf1-b859-e4a67f50a091/unprocessed/</Key><LastModified>2020-11-14T09:23:56.000Z</LastModified><ETag>&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</ETag><Size>0</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>408a3dca-69d4-4bf1-b859-e4a67f50a091/unprocessed/2019Dec1-2019Dec31CustomTransaction.csv</Key><LastModified>2020-11-16T04:24:59.000Z</LastModified><ETag>&quot;2e79e056f38ba2b1adbe45579294c8fc&quot;</ETag><Size>1142388</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>408a3dca-69d4-4bf1-b859-e4a67f50a091/unprocessed/Sponsored Products Advertised product report.xlsx</Key><LastModified>2020-11-16T04:24:28.000Z</LastModified><ETag>&quot;ba0168c0a6cca4c59660829c9e2a830d&quot;</ETag><Size>264603</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Mon, 16 Nov 2020 04:28:42 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,81 @@
+name: Ruby
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    env:
+      RUBY_VERSION: 3.2.2
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+
+      - name: Dependencies
+        run: |
+          gem install rubocop rubocop-packaging rubocop-performance rubocop-rails
+
+      - name: Linter
+        run: |
+          make lint
+
+  test:
+    name: test
+    needs: lint
+    runs-on: ubuntu-latest
+    env:
+      RUBY_VERSION: 3.2.2
+      API_TOKEN: ${{ secrets.API_TOKEN }}
+    services:
+      redis:
+        image: redis:latest
+        ports:
+          - 6379:6379
+      memcached:
+        image: bitnami/memcached:latest
+        ports:
+          - 11211:11211
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: moonbase_test
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_PASSWORD: password
+          POSTGRES_USER: moonbase
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+
+      - name: Clients
+        run: |
+          sudo apt-get install libpq-dev
+
+      - name: Dependencies
+        run: |
+          make bundler
+
+      - name: Tests
+        env:
+          API_TOKEN: API_TOKEN_EXAMPLE
+          AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID_EXAMPLE
+          AWS_REGION: us-east-1
+          AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY_EXAMPLE
+          DATABASE_URL: postgres://moonbase:password@localhost:${{ job.services.postgres.ports[5432] }}/moonbase_test?sslmode=disable
+          RACK_ENV: test
+          RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+          REPORTS_BUCKET: com.abigrobot.moonbase.reports.test
+        run: |
+          make tests

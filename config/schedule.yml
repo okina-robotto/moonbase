@@ -1,0 +1,5 @@
+# Currency Exchange Rates
+currency_exchange_rate_sync:
+  cron: "0 */6 * * *"
+  class: Currency::ExchangeRates::SyncJob
+  queue: medium

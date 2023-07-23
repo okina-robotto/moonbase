@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  pg:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+    command: postgres -c 'max_connections=250'
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - 6379:6379
+  memcache:
+    image: bitnami/memcached:latest
+    environment:
+      MEMCACHED_CACHE_SIZE: 5
+      MEMCACHED_USERNAME: ${MEMCACHIER_USERNAME}
+      MEMCACHED_PASSWORD: ${MEMCACHIER_PASSWORD}
+    ports:
+      - 11211:11211

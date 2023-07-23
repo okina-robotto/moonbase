@@ -1,0 +1,10 @@
+:concurrency: 5
+production:
+  :concurrency: 10
+:queues:
+  - default
+  - [maintenance, 5]
+  - [low, 10]
+  - [medium, 50]
+  - [high, 100]
+  - [critical, 250]

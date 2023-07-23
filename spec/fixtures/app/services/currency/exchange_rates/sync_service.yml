@@ -1,0 +1,236 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://data.fixer.io/api/latest?access_key=FIXER_ACCESS_KEY&base=USD&format=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 14 Nov 2020 05:40:28 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d03cd6e150cb3a087c714b6f5f61c185b1605332428; expires=Mon, 14-Dec-20
+        05:40:28 GMT; path=/; domain=.fixer.io; HttpOnly; SameSite=Lax
+      X-Apilayer-Transaction-Id:
+      - 0b522b17-a369-45fa-a199-d5ccc5a48c3b
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      Last-Modified:
+      - Sat, 14 Nov 2020 04:49:05 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.026'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0666ddfea6000017089e28b000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Fx7kC6vbiNxJFF4yBqH35Ypl3G9Vko86xRfzjdb8mXE6ZFr3HXLTiA6%2FdTQ9kaR7zOCLKYGUifS7lf%2BNKT%2BF94Exmd%2FPa0CvDm7h%2FhMQ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5f1e65dddef41708-SIN
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "success":true,
+          "timestamp":1605329345,
+          "base":"USD",
+          "date":"2020-11-14",
+          "rates":{
+            "AED":3.673042,
+            "AFN":76.950404,
+            "ALL":104.803989,
+            "AMD":495.940403,
+            "ANG":1.79587,
+            "AOA":666.396041,
+            "ARS":79.732159,
+            "AUD":1.375402,
+            "AWG":1.8,
+            "AZN":1.70397,
+            "BAM":1.655785,
+            "BBD":2.020047,
+            "BDT":84.876017,
+            "BGN":1.65248,
+            "BHD":0.377045,
+            "BIF":1940,
+            "BMD":1,
+            "BND":1.349464,
+            "BOB":6.89835,
+            "BRL":5.458504,
+            "BSD":1.000499,
+            "BTC":6.2038076e-5,
+            "BTN":74.664285,
+            "BWP":11.203596,
+            "BYN":2.566859,
+            "BYR":19600,
+            "BZD":2.016661,
+            "CAD":1.314041,
+            "CDF":1966.000362,
+            "CHF":0.912921,
+            "CLF":0.0278,
+            "CLP":767.103912,
+            "CNY":6.606404,
+            "COP":3641.5,
+            "CRC":614.37001,
+            "CUC":1,
+            "CUP":26.5,
+            "CVE":93.403897,
+            "CZK":22.330504,
+            "DJF":177.720394,
+            "DKK":6.295404,
+            "DOP":58.460393,
+            "DZD":129.000359,
+            "EGP":15.637832,
+            "ERN":15.000358,
+            "ETB":37.750392,
+            "EUR":0.844923,
+            "FJD":2.102504,
+            "FKP":0.758078,
+            "GBP":0.757863,
+            "GEL":3.290391,
+            "GGP":0.758078,
+            "GHS":5.84039,
+            "GIP":0.758078,
+            "GMD":51.79039,
+            "GNF":9755.000355,
+            "GTQ":7.786253,
+            "GYD":209.014485,
+            "HKD":7.753504,
+            "HNL":24.303841,
+            "HRK":6.398604,
+            "HTG":64.0809,
+            "HUF":302.060388,
+            "IDR":14161.752006,
+            "ILS":3.368204,
+            "IMP":0.758078,
+            "INR":74.537904,
+            "IQD":1190,
+            "IRR":42105.000352,
+            "ISK":136.550386,
+            "JEP":0.758078,
+            "JMD":148.13708,
+            "JOD":0.70904,
+            "JPY":104.69204,
+            "KES":109.250385,
+            "KGS":84.803801,
+            "KHR":4065.000351,
+            "KMF":416.150384,
+            "KPW":900.033409,
+            "KRW":1108.625039,
+            "KWD":0.305704,
+            "KYD":0.833552,
+            "KZT":430.245257,
+            "LAK":9280.000349,
+            "LBP":1512.411917,
+            "LKR":184.739123,
+            "LRD":159.000348,
+            "LSL":15.510382,
+            "LTL":2.95274,
+            "LVL":0.60489,
+            "LYD":1.355039,
+            "MAD":9.130381,
+            "MDL":17.128284,
+            "MGA":3950.000347,
+            "MKD":52.154665,
+            "MMK":1295.625757,
+            "MNT":2855.386724,
+            "MOP":7.99045,
+            "MRO":357.000515,
+            "MUR":39.850379,
+            "MVR":15.403741,
+            "MWK":762.000345,
+            "MXN":20.405704,
+            "MYR":4.123504,
+            "MZN":73.525039,
+            "NAD":15.510377,
+            "NGN":380.503727,
+            "NIO":34.875039,
+            "NOK":9.169304,
+            "NPR":119.463093,
+            "NZD":1.461386,
+            "OMR":0.384975,
+            "PAB":1.000246,
+            "PEN":3.643504,
+            "PGK":3.505039,
+            "PHP":48.185039,
+            "PKR":158.375038,
+            "PLN":3.78809,
+            "PYG":7035.666816,
+            "QAR":3.641038,
+            "RON":4.114504,
+            "RSD":99.340373,
+            "RUB":77.30369,
+            "RWF":977.5,
+            "SAR":3.750587,
+            "SBD":8.101947,
+            "SCR":20.850372,
+            "SDG":55.303678,
+            "SEK":8.691304,
+            "SGD":1.34826,
+            "SHP":0.758078,
+            "SLL":9990.000339,
+            "SOS":583.000338,
+            "SRD":14.154038,
+            "STD":21031.906016,
+            "SVC":8.752042,
+            "SYP":512.947445,
+            "SZL":15.51037,
+            "THB":30.16037,
+            "TJS":11.332955,
+            "TMT":3.51,
+            "TND":2.750504,
+            "TOP":2.301038,
+            "TRY":7.662504,
+            "TTD":6.788463,
+            "TWD":28.503637,
+            "TZS":2319.000336,
+            "UAH":28.132593,
+            "UGX":3696.802431,
+            "USD":1,
+            "UYU":42.815418,
+            "UZS":10380.000335,
+            "VEF":9.987504,
+            "VND":23176,
+            "VUV":111.849783,
+            "WST":2.631653,
+            "XAF":555.326318,
+            "XAG":0.040521,
+            "XAU":0.00053,
+            "XCD":2.70255,
+            "XDR":0.70504,
+            "XOF":555.000332,
+            "XPF":101.3036,
+            "YER":250.303597,
+            "ZAR":15.505915,
+            "ZMK":9001.203593,
+            "ZMW":20.915079,
+            "ZWL":321.999941
+          }
+        }
+  recorded_at: Sat, 14 Nov 2020 05:40:03 GMT
+recorded_with: VCR 6.0.0
