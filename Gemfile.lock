@@ -167,7 +167,7 @@ GEM
       sorcerer (>= 0.3.7)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    haml (6.1.1)
+    haml (6.1.2)
       temple (>= 0.8.2)
       thor
       tilt
@@ -212,6 +212,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.15.2-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
     numerizer (0.1.1)
     parallel (1.23.0)
@@ -382,6 +384,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   aws-sdk-rails!
