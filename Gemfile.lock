@@ -213,6 +213,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-aarch64-linux)
       racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
+      racc (~> 1.4)
     numerizer (0.1.1)
     parallel (1.23.0)
     parser (3.2.2.3)
@@ -358,7 +360,7 @@ GEM
     temple (0.10.2)
     thor (1.2.2)
     tilt (2.2.0)
-    timecop (0.9.6)
+    timecop (0.9.8)
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -382,6 +384,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   aws-sdk-rails!
