@@ -13,7 +13,7 @@ source "https://rubygems.org" do
   gem "haml"
   gem "httparty"
   gem "pg", "~> 1.1"
-  gem "puma", "~> 5.0"
+  gem "puma", "~> 6.4"
   gem "rack-cors", "~> 2.0.1"
   gem "rails", "~> 7.0.6"
   gem "roo"
