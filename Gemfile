@@ -15,7 +15,7 @@ source "https://rubygems.org" do
   gem "pg", "~> 1.1"
   gem "puma", "~> 5.0"
   gem "rack-cors", "~> 2.0.1"
-  gem "rails", "~> 7.0.6"
+  gem "rails", "~> 7.1.1"
   gem "roo"
   gem "sentry-raven"
   gem "sidekiq", "~> 7.1.2"
